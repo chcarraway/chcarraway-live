@@ -18,15 +18,20 @@ cards = shuffle(cards);
 var card = Object.keys(cards);
 
 function showCard() {
-    if (i === card.length) {
+    if (i === card.length) { //shuffle deck and restart
         i = 0;
         alert("No new cards to display. Shuffling deck and starting over.")
-        document.getElementById('card').innerHTML = "Click the button below to begin";
+        document.getElementById('card').innerHTML = "<h6>Click the button below to begin</h6>";
         cards = shuffle(cards);
     } else {
         var newCard = cards[card[i]];
-        document.getElementById('card').innerHTML = newCard;
+        if (newCard.header === "") { //ignore card if it's blank
+            i++;
+            showCard();
+        } else { //display card
+        document.getElementById('card').innerHTML = '<h3>' + newCard.header + '</h3><br/><h6>' + newCard.body + '</h6>';
         i++;
+        };
     };
 };
 
