@@ -72,6 +72,96 @@ var cards = [
         header: "Cats VS Dogs",
         body: "All players choose a side. Smallest group drinks!"
     },{
+        header: "Coke VS Pepsi",
+        body: "All players choose a side. Smallest group drinks!"
+    },{
+        header: "This One Time, At Band Camp...",
+        body: "If you've ever played a musical instrument, drink!"
+    },{
+        header: "BOOP!",
+        body: "Touch a player's nose of your choice. That player must drink!"
+    },{
+        header: "Sharing Is Caring",
+        body: "Swap drinks with a player of your choice, you both drink!"
+    },{
+        header: "Love Thy Neighbor",
+        body: "Hold hands with the player to your right until your next turn."
+    },{
+        header: "Take One For The Team",
+        body: "Everyone vote on a liquor. Take a shot of it."
+    },{
+        header: "Let Me Get That For You",
+        body: "The next player that has to drink is not allowed to touch their cup. You must pour the drink in their mouth."
+    },{
+        header: "",
+        body: ""
+    },{
+        header: "",
+        body: ""
+    },{
+        header: "",
+        body: ""
+    },{
+        header: "",
+        body: ""
+    },{
+        header: "",
+        body: ""
+    },{
+        header: "",
+        body: ""
+    },{
+        header: "",
+        body: ""
+    },{
+        header: "",
+        body: ""
+    },{
+        header: "",
+        body: ""
+    },{
+        header: "",
+        body: ""
+    },{
+        header: "",
+        body: ""
+    },{
+        header: "",
+        body: ""
+    },{
+        header: "",
+        body: ""
+    },{
+        header: "",
+        body: ""
+    },{
+        header: "",
+        body: ""
+    },{
+        header: "",
+        body: ""
+    },{
+        header: "",
+        body: ""
+    },{
+        header: "",
+        body: ""
+    },{
+        header: "",
+        body: ""
+    },{
+        header: "",
+        body: ""
+    },{
+        header: "",
+        body: ""
+    },{
+        header: "",
+        body: ""
+    },{
+        header: "",
+        body: ""
+    },{
         header: "",
         body: ""
     }
