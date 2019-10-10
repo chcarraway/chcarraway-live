@@ -42,23 +42,23 @@ var cards = [
         header: "Mirror Mirror on the Wall",
         body: "Everyone vote on who has the best haircut. Winner drinks!"
     },{
-        header: "To the window...",
+        header: "To the Window...",
         body: "Everybody must touch a wall. Last player to do so must drink!"
     },{
-        header: "",
-        body: ""
+        header: "Lumberjack Fantasies",
+        body: "Players with a beard must drink!"
     },{
         header: "",
-        body: ""
+        body: "Players without a beard must drink!"
     },{
-        header: "",
-        body: ""
+        header: "Baby Want a Bottle?",
+        body: "The youngest player must drink!"
     },{
-        header: "",
-        body: ""
+        header: "Get Off My Lawn!",
+        body: "The oldest player must drink!"
     },{
-        header: "",
-        body: ""
+        header: "Maybe She's Born With It...",
+        body: "All players wearing makeup must drink!"
     },{
         header: "",
         body: ""
