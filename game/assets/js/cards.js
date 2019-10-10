@@ -34,22 +34,22 @@ var cards = [
         body: "All players with the same beverage as you must drink!"
     },{
         header: "I'm The Captain Now",
-        body: "Create a rule. If anyone breaks that rule, they drink!"
+        body: "Create a rule. If any player breaks that rule, they drink!"
     },{
         header: "Never Have I Ever",
-        body: "Play a round of Never Have I Ever"
+        body: "Play a round of Never Have I Ever. All players must drink if they have done the thing!"
     },{
         header: "Mirror Mirror On The Wall",
-        body: "Everyone vote on who has the best haircut. Winner drinks!"
+        body: "All players vote on who has the best haircut. Winner drinks!"
     },{
-        header: "To The Window...",
-        body: "Everybody must touch a wall. Last player to do so must drink!"
+        header: "To The Window, To The Wall!",
+        body: "All players must touch a wall. Last player to do so must drink!"
     },{
         header: "Lumberjack Fantasies",
-        body: "Players with a beard must drink!"
+        body: "All players with a beard must drink!"
     },{
         header: "I Couldn't Come Up With A Witty Title",
-        body: "Players without a beard must drink!"
+        body: "All players without a beard must drink!"
     },{
         header: "Baby Want A Bottle?",
         body: "The youngest player must drink!"
@@ -88,7 +88,7 @@ var cards = [
         body: "Hold hands with the player to your right until your next turn."
     },{
         header: "Take One For The Team",
-        body: "Everyone vote on a liquor. Take a shot of it."
+        body: "All players vote on a liquor. Take a shot of it."
     },{
         header: "Let Me Get That For You",
         body: "The next player that has to drink is not allowed to touch their cup. You must pour the drink in their mouth."
@@ -123,11 +123,11 @@ var cards = [
         header: "Popularity Contest",
         body: "The player with the most friends on Facebook must take a shot!"
     },{
-        header: "",
-        body: ""
+        header: "Show Me The Money!",
+        body: "All players must produce physical currency that they own. Any player who cannot must drink!"
     },{
-        header: "",
-        body: ""
+        header: "Get Down Mr. President!",
+        body: "The next time a player has to take a shot, you take it for them!"
     },{
         header: "",
         body: ""
