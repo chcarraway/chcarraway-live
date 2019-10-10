@@ -20,7 +20,7 @@ var card = Object.keys(cards);
 function showCard() {
     if (i === card.length) { //shuffle deck and restart
         i = 0;
-        alert("No new cards to display. Shuffling deck and starting over.")
+        alert("No new cards to display. Shuffling deck and starting over.");
         document.getElementById('card').innerHTML = "<h6>Click the button below to begin</h6>";
         cards = shuffle(cards);
     } else {
