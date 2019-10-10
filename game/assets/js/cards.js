@@ -93,35 +93,35 @@ var cards = [
         header: "Let Me Get That For You",
         body: "The next player that has to drink is not allowed to touch their cup. You must pour the drink in their mouth."
     },{
-        header: "",
-        body: ""
+        header: "Show Me What You Got",
+        body: "All players must show off their tattoos and take a drink. If any player is unwilling to show one, they must take a shot instead."
     },{
-        header: "",
-        body: ""
+        header: "Witty Title Goes Here",
+        body: "The next player to swear takes a shot!"
     },{
-        header: "",
-        body: ""
+        header: "The Card Of Doom",
+        body: "Finish your drink, then take a shot!"
     },{
-        header: "",
-        body: ""
+        header: "Bros Before Hoes",
+        body: "All males must drink!"
     },{
-        header: "",
-        body: ""
+        header: "Chicks Before Dicks",
+        body: "All females must drink!"
     },{
-        header: "",
-        body: ""
+        header: "Communion",
+        body: "All religious players must drink!"
     },{
-        header: "",
-        body: ""
+        header: "An Apple A Day",
+        body: "All players who own an iPhone must drink!"
     },{
-        header: "",
-        body: ""
+        header: "Do Androids Dream Of Electric Sheep?",
+        body: "All players who own an Android phone must drink!"
     },{
-        header: "",
-        body: ""
+        header: "Prime Time",
+        body: "All players must reveal their latest Amazon purchase. The player with the most expensive item must drink!"
     },{
-        header: "",
-        body: ""
+        header: "Popularity Contest",
+        body: "The player with the most friends on Facebook must take a shot!"
     },{
         header: "",
         body: ""
