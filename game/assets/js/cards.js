@@ -48,7 +48,7 @@ var cards = [
         header: "Lumberjack Fantasies",
         body: "Players with a beard must drink!"
     },{
-        header: "",
+        header: "I Couldn't Come Up with a Witty Title",
         body: "Players without a beard must drink!"
     },{
         header: "Baby Want a Bottle?",
@@ -60,17 +60,17 @@ var cards = [
         header: "Maybe She's Born With It...",
         body: "All players wearing makeup must drink!"
     },{
-        header: "",
-        body: ""
+        header: "Third Time's a Charm",
+        body: "Drink three times!"
     },{
-        header: "",
-        body: ""
+        header: "Deuces Baby",
+        body: "Drink two times!"
     },{
-        header: "",
-        body: ""
+        header: "I Couldn't Come Up with a Witty Title",
+        body: "Take a drink!"
     },{
-        header: "",
-        body: ""
+        header: "Cats vs Dogs",
+        body: "All players choose a side. Smallest group drinks!"
     },{
         header: "",
         body: ""
