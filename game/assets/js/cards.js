@@ -131,8 +131,8 @@ var cards = [
         header: "Get Down Mr. President!",
         body: "The next time a player has to take a shot, you take it for them!"
     },{
-        header: "",
-        body: ""
+        header: "Survey Says!",
+        body: "Create a category. The player to your left must name an object in that category. This continues until a player can't come up with anything, that player drinks!"
     },{
         header: "",
         body: ""
