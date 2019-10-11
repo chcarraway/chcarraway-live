@@ -134,9 +134,10 @@ var cards = [
         header: "Survey Says!",
         body: "Create a category. The player to your left must name an object in that category. This continues until a player can't come up with anything, that player drinks!"
     },{
-        header: "",
-        body: ""
-    },{
+        header: "Jeffrey",
+        body: "When speaking to another player for the next 2 rounds, you must say that player's name before AND after your statement. If you forget, drink!",
+    decay: 2
+	},{
         header: "",
         body: ""
     },{
