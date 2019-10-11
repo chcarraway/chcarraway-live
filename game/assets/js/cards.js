@@ -34,7 +34,8 @@ var cards = [
         body: "All players with the same beverage as you must drink!"
     },{
         header: "I'm The Captain Now",
-        body: "Create a rule. If any player breaks that rule, they drink!"
+        body: "Create a rule that lasts for 5 turns. If any player breaks that rule, they drink!",
+        decay: 5
     },{
         header: "Never Have I Ever",
         body: "Play a round of Never Have I Ever. All players must drink if they have done the thing!"
@@ -48,7 +49,7 @@ var cards = [
         header: "Lumberjack Fantasies",
         body: "All players with a beard must drink!"
     },{
-        header: "I Couldn't Come Up With A Witty Title",
+        header: "Babyface",
         body: "All players without a beard must drink!"
     },{
         header: "Baby Want A Bottle?",
@@ -85,7 +86,8 @@ var cards = [
         body: "Swap drinks with a player of your choice, you both drink!"
     },{
         header: "Love Thy Neighbor",
-        body: "Hold hands with the player to your right until your next turn."
+        body: "Hold hands with the player to your right until your next turn.",
+        decay: 1
     },{
         header: "Take One For The Team",
         body: "All players vote on a liquor. Take a shot of it."

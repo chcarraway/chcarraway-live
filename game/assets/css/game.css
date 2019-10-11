@@ -11,5 +11,6 @@
 }
 .btn {
     margin: auto;
+    margin-bottom: 1em;
     width: 13em;
 }
