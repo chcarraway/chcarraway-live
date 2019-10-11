@@ -9,34 +9,71 @@
     <script src="../assets/js/bootstrap.min.js"></script>
     <!--script src='assets/js/cards.test.js'></script-->
     <script src="assets/js/cards.js"></script>
+
 </head>
 
 <body>
     <div class='container text-center'>
         <div class="row">
             <div class="col">
-                <h1>Drinking Game - 3 Players</h1>
+                <h1 id='header'>Drinking Game</h1>
             </div>
         </div>
         <div class='row'>
             <div class='col'>
                 <div class='gameArea'>
                     <div class='card shadow' id='card'><h1>Drinking Game</h1></div>
-                    <!-- Modal -->
+                    <!-- Welcome Modal -->
+                        <div class="modal fade" id="welcomeModal" tabindex="-1" role="dialog" aria-labelledby="welcomeModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="welcomeModalLabel">Welcome to Drinking Game!</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>Please drink responsibly</p>
+                                    </div>
+                                        <div class="modal-footer">
+                                        <button type="button" id="welcomeContinue" class="btn btn-primary">Continue</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    <!-- Add Player Modal -->
+                    <div class="modal fade" id="addPlayerModal" tabindex="-1" role="dialog" aria-labelledby="addPlayerModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+                        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="addPlayerModalLabel">Player 1</h5>
+                                </div>
+                                <div class="modal-body">
+                                    <p>What is your name?</p>
+                                        <input type='text' id='player' class='form-control' placeholder="Your name here">
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" id="addPlayer" class="btn btn-primary">Add Player</button>
+                                    <button type="button" id="beginGame" class="btn btn-secondary">Begin Game</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Shuffle Modal -->
                         <div class="modal fade" id="shuffleModal" tabindex="-1" role="dialog" aria-labelledby="shuffleModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
                                 <div class="modal-content">
                                     <div class="modal-header">
-                                    <h5 class="modal-title" id="shuffleModalLabel">That's All, Folks!</h5>
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
+                                        <h5 class="modal-title" id="shuffleModalLabel">That's All, Folks!</h5>
+                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
                                     </div>
                                     <div class="modal-body">
-                                    No cards remaining in deck. Shuffling deck.
+                                        <p>No cards remaining in deck. Shuffling deck.</p>
                                     </div>
                                     <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                                     </div>
                                 </div>
                             </div>
@@ -46,10 +83,9 @@
                 <table class='table table-sm d-none' id='ongoingtable'>
                     <thead>
                         <tr>
-                            <th colspan='5'>Ongoing Effects</th>
+                            <th colspan='4'>Ongoing Effects</th>
                         </tr>
                         <tr>
-                            <th scope='col'>ID</th>
                             <th scope='col'>Title</th>
                             <th scope='col'>Body</th>
                             <th scope='col'>Turns Remaining</th>
@@ -62,6 +98,11 @@
             </div>
         </div>
     </div>
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#welcomeModal').modal('show');
+    });
+    </script>
 </body>
 <script src="assets/js/code.js"></script>
 </html>

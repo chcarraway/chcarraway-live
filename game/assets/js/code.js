@@ -1,13 +1,7 @@
-/*
-TODO:
-build modal to get # of players and their names
-restructure decay to be turns = rounds * players
-*/
-
-
 rules = [];
-players = 3;
+players = [];
 currentPlayer = "Corey";
+turn = 0;
 i = 0;
 ruleCount = 0;
 activeRules = 0;
@@ -39,9 +33,34 @@ function Rule(id, header, body, decay, player) {
     this.player = player;
 }
 
-function Player(id, name) {
-    this.id = id;
-    this.name = name;
+function welcomeContinue() {
+    $('#welcomeModal').modal('hide');
+    $('#addPlayerModal').modal('show');
+    document.getElementById('beginGame').disabled = true;
+    document.getElementById('player').focus();
+}
+
+function addPlayerModal() {
+    document.getElementById('addPlayerModalLabel').innerHTML = `Player ${1 + players.length}`;
+    document.getElementById('player').value = "";
+    if (players.length >= 2) {
+        button = document.getElementById('beginGame');
+        button.disabled = false;
+        button.classList.remove("btn-secondary");
+        button.classList.add("btn-danger");
+    };
+    document.getElementById('player').focus();
+}
+
+function addPlayer() {
+    player = document.getElementById('player').value;
+    players.push(player);
+    addPlayerModal();
+}
+
+function beginGame() {
+    $('#addPlayerModal').modal('hide');
+    currentPlayer = players[turn];
 }
 
 function newTurn() {
@@ -52,19 +71,25 @@ function newTurn() {
     //add items to table
     for (loop = 0; loop < ruleCount; loop++){
         if (rules[loop].decay > 0) {
-            tbody.innerHTML += "<tr><td>" + rules[loop].id + "</td><td>" + rules[loop].header + "</td><td>" + rules[loop].body + "</td><td>" + rules[loop].decay + "</td><td>" + rules[loop].player + "</td></tr>"; //add rule to Ongoing Effects table
+            tbody.innerHTML += "</td><td>" + rules[loop].header + "</td><td>" + rules[loop].body + "</td><td>" + rules[loop].decay + "</td><td>" + rules[loop].player + "</td></tr>"; //add rule to Ongoing Effects table
         }
         if (rules[loop].decay == 0) {
             activeRules--
         }
         rules[loop].decay--; //decriment existing rules with decay
     }
-    if (activeRules == 0) {
+    if (activeRules == 0) { //hide table if no rules
         table.classList.add("d-none")
-    } else {
+    } else { //show table
         table.classList.remove("d-none")
     }
     //change active player
+    currentPlayer = players[turn];
+    document.getElementById('header').innerHTML = currentPlayer + '\'s Turn';
+    turn++;
+    if (turn === players.length) {
+        turn = 0;
+    };
 
     //call showCard
     showCard();
@@ -85,8 +110,8 @@ function showCard() {
             document.getElementById('card').innerHTML = '<h3>' + newCard.header + '</h3><br/><h6>' + newCard.body + '</h6>';
             i++;
             if (newCard.decay > 0) { //if card has a decay value...
-                var turns = newCard.decay * players;
-                rule = new Rule(ruleCount, newCard.header, newCard.body, turns, currentPlayer); //create new rule
+                var duration = newCard.decay * players.length;
+                rule = new Rule(ruleCount, newCard.header, newCard.body, duration, currentPlayer); //create new rule
                 rules.push(rule);
                 ruleCount++;
                 activeRules++
@@ -95,4 +120,7 @@ function showCard() {
     };
 }
 
+document.getElementById("welcomeContinue").addEventListener('click', welcomeContinue);
+document.getElementById("addPlayer").addEventListener('click', addPlayer);
+document.getElementById("beginGame").addEventListener('click', beginGame);
 document.getElementById("nextCard").addEventListener('click', newTurn);

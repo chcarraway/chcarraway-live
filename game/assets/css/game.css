@@ -9,8 +9,10 @@
     width: 13em;
     height: 20em;
 }
+#continue {
+    width: 100%;
+}
 .btn {
-    margin: auto;
-    margin-bottom: 1em;
+    margin: 1em, 0;
     width: 13em;
 }
