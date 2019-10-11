@@ -3,6 +3,7 @@
 }
 .card {
     margin: auto;
+    margin-bottom: 1em;
     justify-content: center;
     align-items: center;
     padding: 1em;
@@ -13,8 +14,9 @@
     width: 100%;
 }
 .btn {
-    margin: 1em, 0;
+    margin-bottom: 2em;
     width: 13em;
+
 }
 .shake {
     animation: shake 0.5s;
