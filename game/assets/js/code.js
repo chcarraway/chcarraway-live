@@ -103,8 +103,8 @@ function showCard() {
     if (i === card.length) { //if 0 cards left in deck, shuffle deck and restart
         $('#shuffleModal').modal('show');
         i = 1;
-        document.getElementById('card').innerHTML = "<h1>Drinking Game</h1>";
         cards = shuffle(cards); //comment out for decay testing
+showCard();
     } else {
         var newCard = cards[card[i]];
         if (newCard.header === "") { //if card is blank, ignore this card and move on to the next
