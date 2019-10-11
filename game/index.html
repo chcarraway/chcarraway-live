@@ -6,10 +6,9 @@
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/game.css">
     <script src='../assets/js/jquery-3.4.1.min.js'></script>
-    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/bootstrap.bundle.min.js"></script>
     <!--script src='assets/js/cards.test.js'></script-->
     <script src="assets/js/cards.js"></script>
-
 </head>
 
 <body>
@@ -33,7 +32,7 @@
                                     <div class="modal-body">
                                         <p>Please drink responsibly</p>
                                     </div>
-                                        <div class="modal-footer">
+                                    <div class="modal-footer">
                                         <button type="button" id="welcomeContinue" class="btn btn-primary">Continue</button>
                                     </div>
                                 </div>
@@ -48,12 +47,14 @@
                                     <h5 class="modal-title" id="addPlayerModalLabel">Player 1</h5>
                                 </div>
                                 <div class="modal-body">
-                                    <p>What is your name?</p>
-                                        <input type='text' id='player' class='form-control' placeholder="Your name here">
+                                    <form>
+                                    <p id='nameLabel'>What is your name?</p>
+                                    <input type='text' id='player' class='form-control' placeholder="Your name here">
+                                    </form>
                                 </div>
                                 <div class="modal-footer">
                                     <button type="button" id="addPlayer" class="btn btn-primary">Add Player</button>
-                                    <button type="button" id="beginGame" class="btn btn-secondary">Begin Game</button>
+                                        <button type="button" id="beginGame" class="btn btn-secondary" data-toggle="tooltip" title="Requires 2 or more Players">Begin Game</button>
                                 </div>
                             </div>
                         </div>

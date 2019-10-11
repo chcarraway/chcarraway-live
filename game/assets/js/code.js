@@ -43,11 +43,13 @@ function welcomeContinue() {
 function addPlayerModal() {
     document.getElementById('addPlayerModalLabel').innerHTML = `Player ${1 + players.length}`;
     document.getElementById('player').value = "";
+    document.getElementById('nameLabel').innerHTML = "What is your name?";
     if (players.length >= 2) {
         button = document.getElementById('beginGame');
         button.disabled = false;
         button.classList.remove("btn-secondary");
         button.classList.add("btn-danger");
+        $('button').tooltip('disable');
     };
     document.getElementById('player').focus();
 }
@@ -120,7 +122,24 @@ function showCard() {
     };
 }
 
+function removeShake() {
+    document.getElementById('addPlayerModal').classList.remove("shake");
+}
+
+function validate() {
+    var player = document.getElementById('player').value;
+    if (player == "" || player == null) {
+        document.getElementById('nameLabel').innerHTML = "Please enter a name";
+        document.getElementById('addPlayerModal').classList.add("shake");
+        setTimeout(removeShake, 1000);
+        document.getElementById('player').focus();
+        return false;
+    } else {
+        addPlayer()
+    }
+}
+
 document.getElementById("welcomeContinue").addEventListener('click', welcomeContinue);
-document.getElementById("addPlayer").addEventListener('click', addPlayer);
+document.getElementById("addPlayer").addEventListener('click', validate);
 document.getElementById("beginGame").addEventListener('click', beginGame);
 document.getElementById("nextCard").addEventListener('click', newTurn);
