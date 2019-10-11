@@ -34,7 +34,7 @@ var cards = [
         body: "All players with the same beverage as you must drink!"
     },{
         header: "I'm The Captain Now",
-        body: "Create a rule that lasts for 5 turns. If any player breaks that rule, they drink!",
+        body: "Create a rule that lasts for 5 rounds. If any player breaks that rule, they drink!",
         decay: 5
     },{
         header: "Never Have I Ever",
