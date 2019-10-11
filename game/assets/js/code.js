@@ -102,7 +102,7 @@ function newTurn() {
 function showCard() {
     if (i === card.length) { //if 0 cards left in deck, shuffle deck and restart
         $('#shuffleModal').modal('show');
-        i = 0;
+        i = 1;
         document.getElementById('card').innerHTML = "<h1>Drinking Game</h1>";
         cards = shuffle(cards); //comment out for decay testing
     } else {
