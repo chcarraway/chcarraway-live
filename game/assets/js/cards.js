@@ -246,6 +246,11 @@ var cards = [
         header: "Love Thy Neighbor",
         body: "Hold hands with the player to your right until your next turn.",
         decay: 1
+    },{
+        category: "Ongoing",
+        header: "For Valhalla!",
+        body: "For the next 3 rounds, you are the Viking. Whenever you put your horns up (place fingers up by head), each other player must paddle twice on each side and then put their horns up. Last player to do so must drink!",
+        decay: 3
     },
     
     
