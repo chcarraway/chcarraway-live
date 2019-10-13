@@ -136,14 +136,14 @@ var cards = [
     },{
         header: "Jeffrey",
         body: "When speaking to another player for the next 2 rounds, you must say that player's name before AND after your statement. If you forget, drink!",
-    decay: 2
+        decay: 2
 	},{
         header: "Little Green Man",
         body: "Aliens are invading, and hanging out on top of your drinks! Every time you drink for the next 3 rounds, you must remove the little green man or else you drink again!",
-decay: 3
+        decay: 3
     },{
-        header: "",
-        body: ""
+        header: "Game Over",
+        body: "If you've played a video game in the past 24 hours, drink!"
     },{
         header: "",
         body: ""
