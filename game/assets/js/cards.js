@@ -180,7 +180,7 @@ var cards = [
     {
         category: "VS",
         header: "Versus!",
-        body: "These cards split the room, making the lease popular opinion drink!",
+        body: "These cards split the room, making the least popular opinion drink!",
         nac: "nac"
     },{
         category: "VS",
