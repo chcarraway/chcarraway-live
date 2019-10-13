@@ -175,6 +175,24 @@ var cards = [
         category: "Multi",
         header: "Game Over",
         body: "If you've played a video game in the past 24 hours, drink!"
+    },{
+        category: "Multi",
+        header: "Nerd Check",
+        body: "All players who do not own a set of 'rpg' dice must drink!",
+        contrib: "Jeremiah Emerson Williams"
+    },{
+        category: "Multi",
+        header: "Nerd Check",
+        body: "Any players who have never leveled a World of Warcraft character past level 20 must drink!",
+        contrib: "Jeremiah Emerson Williams"
+    },{
+        category: "Multi",
+        header: "Jock Check",
+        body: "Any Players who have never won an athletic competetion must drink!"
+    },{
+        category: "Multi",
+        header: "Basic Bitch Check",
+        body: "Any players who don't have the Starbucks app on their phones must drink!"
     },
     
     // VS series
@@ -259,10 +277,6 @@ var cards = [
 
 /*
     {
-        category: "",
-        header: "",
-        body: ""
-    },{
         category: "",
         header: "",
         body: ""

@@ -24,7 +24,13 @@
     padding: 1em;
     width: 100%;
 }
-
+.contrib {
+    color: lightgrey;
+    position: absolute;
+    bottom: 0;
+    right: 1em;
+    font-size: .9rem;
+}
 #continue {
     width: 100%;
 }
