@@ -249,7 +249,7 @@ var cards = [
     },{
         category: "Ongoing",
         header: "For Valhalla!",
-        body: "For the next 3 rounds, you are the Viking. Whenever you put your horns up (place fingers up by head), each other player must paddle twice on each side and then put their horns up. Last player to do so must drink!",
+        body: "For the next 3 rounds, you are the Viking. Whenever you put your horns up (place fingers up by head), all other players must paddle twice on each side and then put their horns up. Last player to do so must drink!",
         decay: 3
     },
     
