@@ -10,8 +10,6 @@ card = Object.keys(cards);
 table = document.getElementById("ongoingtable");
 tbody = document.getElementById("ongoingtbody");
 
-
-
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
     // While there remain elements to shuffle...
