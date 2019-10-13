@@ -40,7 +40,8 @@ var cards = [
     },{
         category: "Single",
         header: "BOOP!",
-        body: "Touch a player's nose of your choice. That player must drink!"
+        body: "Touch a player's nose of your choice. That player must drink!",
+        contrib: "Kellaaaaayyy"
     },{
         category: "Single",
         header: "Take One For The Team",
@@ -235,12 +236,14 @@ var cards = [
         category: "Ongoing",
         header: "Little Green Man",
         body: "Aliens are invading, and hanging out on top of your drinks! Every time you drink for the next 3 rounds, you must remove the little green man or else you drink again!",
-        decay: 3
+        decay: 3,
+        contrib: "Charnie Noodie"
     },{
         category: "Ongoing",
         header: "\"Jeffrey...\"",
         body: "Whenever a player speaks to another player for the next 2 rounds, that player must say that player's name before AND after your statement. If that player forgets, they must drink!",
-        decay: 2
+        decay: 2,
+        contrib: "CheeksAdam"
 	},{
         category: "Ongoing",
         header: "Love Thy Neighbor",
@@ -250,11 +253,9 @@ var cards = [
         category: "Ongoing",
         header: "For Valhalla!",
         body: "For the next 3 rounds, you are the Viking. Whenever you put your horns up (place fingers up by head), all other players must paddle twice on each side and then put their horns up. Last player to do so must drink!",
-        decay: 3
-    },
-    
-    
-
+        decay: 3,
+        contrib: "Kriseevee"
+    },    
 
 /*
     {
