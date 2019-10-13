@@ -105,7 +105,7 @@ function showCard() {
 showCard();
     } else {
         var newCard = cards[card[i]];
-        if (newCard.header === "") { //if card is blank, ignore this card and move on to the next
+        if (newCard.header === "" || newCard.nac === "nac") { //if card is blank, or if card is not a card, ignore this card and move on to the next
             i++;
             showCard();
         } else { //display card

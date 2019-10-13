@@ -10,6 +10,21 @@
     width: 13em;
     height: 20em;
 }
+
+.nac {
+    background-color: black;
+    color: white;
+}
+
+.category {
+    margin: auto;
+    margin-bottom: 1em;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    width: 100%;
+}
+
 #continue {
     width: 100%;
 }
