@@ -1,3 +1,7 @@
 .p1Zone {
     transform: rotate(180deg);
 }
+.z2 {
+    z-index: 2;
+    background-color: yellow;
+}
