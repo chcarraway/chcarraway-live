@@ -76,14 +76,14 @@ function newTurn() {
             tbody.innerHTML += "</td><td>" + rules[loop].header + "</td><td>" + rules[loop].body + "</td><td>" + rules[loop].decay + "</td><td>" + rules[loop].player + "</td></tr>"; //add rule to Ongoing Effects table
         }
         if (rules[loop].decay == 0) {
-            activeRules--
+            activeRules--;
         }
         rules[loop].decay--; //decriment existing rules with decay
     }
     if (activeRules == 0) { //hide table if no rules
-        table.classList.add("d-none")
+        table.classList.add("d-none");
     } else { //show table
-        table.classList.remove("d-none")
+        table.classList.remove("d-none");
     }
     //change active player
     currentPlayer = players[turn];
@@ -105,7 +105,7 @@ function showCard() {
 showCard();
     } else {
         var newCard = cards[card[i]];
-        if (newCard.header === "") { //if card is blank, ignore this card and move on to the next
+        if (newCard.header === "" || newCard.nac === "nac") { //if card is blank, or if card is not a card, ignore this card and move on to the next
             i++;
             showCard();
         } else { //display card
@@ -116,7 +116,7 @@ showCard();
                 rule = new Rule(ruleCount, newCard.header, newCard.body, duration, currentPlayer); //create new rule
                 rules.push(rule);
                 ruleCount++;
-                activeRules++
+                activeRules++;
             };
         };
     };
@@ -135,10 +135,11 @@ function validate() {
         document.getElementById('player').focus();
         return false;
     } else {
-        addPlayer()
+        addPlayer();
     }
 }
 
+document.getElementById("addPlayerModalForm").addEventListener('submit', function(e){e.preventDefault()});
 document.getElementById("welcomeContinue").addEventListener('click', welcomeContinue);
 document.getElementById("addPlayer").addEventListener('click', validate);
 document.getElementById("beginGame").addEventListener('click', beginGame);

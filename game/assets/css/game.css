@@ -10,6 +10,27 @@
     width: 13em;
     height: 20em;
 }
+
+.nac {
+    background-color: black;
+    color: white;
+}
+
+.category {
+    margin: auto;
+    margin-bottom: 1em;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    width: 100%;
+}
+.contrib {
+    color: lightgrey;
+    position: absolute;
+    bottom: 0;
+    right: 1em;
+    font-size: .9rem;
+}
 #continue {
     width: 100%;
 }
