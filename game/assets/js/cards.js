@@ -259,7 +259,7 @@ var cards = [
     },{
         category: "Ongoing",
         header: "\"Jeffrey...\"",
-        body: "Whenever a player speaks to another player for the next 2 rounds, that player must say that player's name before AND after your statement. If that player forgets, they must drink!",
+        body: "Whenever a player speaks to another player for the next 2 rounds, that player must say that player's name before AND after their statement. If that player forgets, they must drink!",
         decay: 2,
         contrib: "CheeksAdam"
 	},{
