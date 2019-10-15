@@ -11,6 +11,7 @@
     <div class='container text-center'>
         <div class="row">
             <div class="col">
+
                 <!-- Starting Life Modal -->
                 <div class="modal fade" id="startingLifeModal" tabindex="-1" role="dialog" aria-labelledby="startingLifeLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
                     <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
@@ -29,36 +30,34 @@
 
                 <!-- Name Modal -->
                 <div class="modal fade" id="nameModal" tabindex="-1" role="dialog" aria-labelledby="nameLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
-                        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
-                            <div class="modal-content">
-                                <div class="modal-body">
-                                    <input type="text" id="nameField" class="form-control" placeholder="Player">
-                                    <button type="button" id="nameModalButton" class="btn btn-primary">Continue</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                <!-- Counter Modal -->
-                <div class="modal fade" id="counterModal" tabindex="-1" role="dialog" aria-labelledby="counterLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
                     <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
                         <div class="modal-content">
                             <div class="modal-body">
-                                <div class='p1Zone'>
-                                    <h1 id='p1Up'>+</h1>
-                                    <h1 id='p1Life'>0</h1>
-                                    <h1 id='p1Down'>-</h1>
-                                    <h4 id='p1Name'>PLAYER 1</h4>
-                                </div>
-                                <hr />
-                                <div class='p2Zone'>
-                                    <h1 id='p2Up'>+</h1>
-                                    <h1 id='p2Life'>0</h1>
-                                    <h1 id='p2Down'>-</h1>
-                                    <h4 id='p2Name'>PLAYER 2</h4>
-                                </div>
+                                <input type="text" id="nameField" class="form-control" placeholder="Player">
+                                <button type="button" id="nameModalButton" class="btn btn-primary btn-block">Continue</button>
                             </div>
                         </div>
+                    </div>
+                </div>
+
+                <div class='p1Zone card'>
+                    <div class="card-body">
+                        <button type="button" class="btn btn-outline-primary btn-block h-25" id='p1Up'>+</button>
+                        <h1 class="display-1" id='p1Life'>0</h1>
+                        <button type="button" class="btn btn-outline-primary btn-block h-25" id='p1Down'>-</button>
+                    </div>
+                    <div class="card-footer">
+                        <h4 id='p1Name'>PLAYER 1</h4>
+                    </div>
+                </div>
+                <div class='p2Zone card'>
+                    <div class="card-body">
+                        <button type="button" class="btn btn-outline-primary btn-block h-25" id='p2Up'>+</button>
+                        <h1 class="display-1" id='p2Life'>0</h1>
+                        <button type="button" class="btn btn-outline-primary btn-block h-25" id='p2Down'>-</button>
+                    </div>
+                    <div class="card-footer">
+                        <h4 id='p2Name'>PLAYER 2</h4>
                     </div>
                 </div>
             </div>

@@ -4,28 +4,42 @@
     <title>chcarraway.com</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
 </head>
 
 <body>
+    <div class='jumbotron text-center'>
+        <h1 class="text-center">chcarraway.com</h1>
+        <p>Personal website of Corey Carraway<br />I'm learning web dev as a hobby</p>
+    </div>
     <div class='container text-center'>
         <div class='row'>
-            <div class='col'>
-                <div id="AGDG" class='container'>
-                    <h1>Another Generic Drinking Game</h1>
-                    <p>First major project, a card based drinking game</p>
-                    <div class='col'>
-                        <div class='row'>
-                            <button role="button" class="btn btn-outline-primary btn-lg btn-block" onclick="window.location.href = 'game';">Let's play a drinking game!</button>
-                            <button role="button" class="btn btn-outline-primary btn-lg btn-block" onclick="window.location.href = 'game/cards.html';">View drinking game cards</button>
+            <div class="col">
+                <div class="card-deck">
+                    <div id="AGDG" class='card border rounded-lg'>
+                        <h5 class="card-header">
+                            Another Generic Drinking Game
+                        </h5>
+                        <div class="card-body">
+                            First major project, a card based drinking game
+                        </div>
+                        <div class="card-footer">
+                            <div class="btn-group w-100" role="group">
+                                <button role="button" class="btn btn-outline-primary btn-lg" onclick="window.location.href = 'game';">Play Game</button>
+                                <button role="button" class="btn btn-outline-primary btn-lg" onclick="window.location.href = 'game/cards.html';">View Cards</button>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div id="Counter" class='container'>
-                    <h1>MTG Life Counter</h1>
-                    <p>Quick and dirty Magic: The Gathering life counter I made in under two hours</p>
-                    <div class='col'>
-                        <div class='row'>
-                            <button role="button" class="btn btn-outline-primary btn-lg btn-block" onclick="window.location.href = 'counter';">MTG Life Counter</button>
+                    <div id="Counter" class='card border rounded-lg'>
+                        <h5 class="card-header">
+                            MTG Life Counter
+                        </h5>
+                        <div class="card-body">
+                            Quick and dirty Magic: The Gathering life counter I made in under two hours
+                        </div>
+                        <div class="card-footer">
+                            <button role="button" class="btn btn-outline-primary btn-block btn-lg" onclick="window.location.href = 'counter';">MTG Life Counter</button>
                         </div>
                     </div>
                 </div>
