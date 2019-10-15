@@ -22,63 +22,6 @@
             <div class='col'>
                 <div class='gameArea' id="gameArea">
                     <div class='card shadow nac' id='card'><h1>Another Generic Drinking Game</h1></div>
-                    <!-- Welcome Modal -->
-                        <div class="modal fade" id="welcomeModal" tabindex="-1" role="dialog" aria-labelledby="welcomeModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
-                            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="welcomeModalLabel">Welcome to Another Generic Drinking Game!</h5>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>Please drink responsibly<br />Or not, I'm not your dad<br /><br />Inspired by the multitude of cheaply produced card games that have become popular from the past few years</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" id="welcomeContinue" class="btn btn-primary">Continue</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                    <!-- Add Player Modal -->
-                    <div class="modal fade" id="addPlayerModal" tabindex="-1" role="dialog" aria-labelledby="addPlayerModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
-                        <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <h5 class="modal-title" id="addPlayerModalLabel">Player 1</h5>
-                                </div>
-                                <div class="modal-body">
-                                    <form id="addPlayerModalForm">
-                                    <p id='nameLabel'>What is your name?</p>
-                                    <input type='text' id='player' class='form-control' placeholder="Your name here">
-                                    </form>
-                                </div>
-                                <div class="modal-footer">
-                                    <button type="button" id="addPlayer" class="btn btn-primary">Add Player</button>
-                                        <button type="button" id="beginGame" class="btn btn-secondary" data-toggle="tooltip" title="Requires 2 or more Players">Begin Game</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Shuffle Modal -->
-                        <div class="modal fade" id="shuffleModal" tabindex="-1" role="dialog" aria-labelledby="shuffleModalLabel" aria-hidden="true">
-                            <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="shuffleModalLabel">That's All, Folks!</h5>
-                                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>No cards remaining in deck. Shuffling deck.</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
                 </div>
                 <button role="button" id="nextCard" class="btn btn-primary">Click Here to Begin</button>
                 <table class='table table-sm d-none' id='ongoingtable'>
@@ -96,6 +39,63 @@
                     <tbody id='ongoingtbody'>
                     </tbody>
                 </table>
+            </div>
+        </div>
+        <!-- Welcome Modal -->
+        <div class="modal fade" id="welcomeModal" tabindex="-1" role="dialog" aria-labelledby="welcomeModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="welcomeModalLabel">Welcome to Another Generic Drinking Game!</h5>
+                    </div>
+                    <div class="modal-body">
+                        <p>Please drink responsibly<br />Or not, I'm not your dad<br /><br />Inspired by the multitude of cheaply produced card games that have become popular from the past few years</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="welcomeContinue" class="btn btn-primary">Continue</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Add Player Modal -->
+        <div class="modal fade" id="addPlayerModal" tabindex="-1" role="dialog" aria-labelledby="addPlayerModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
+            <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="addPlayerModalLabel">Player 1</h5>
+                    </div>
+                    <div class="modal-body">
+                        <form id="addPlayerModalForm">
+                        <p id='nameLabel'>What is your name?</p>
+                        <input type='text' id='player' class='form-control' placeholder="Your name here">
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" id="addPlayer" class="btn btn-primary">Add Player</button>
+                            <button type="button" id="beginGame" class="btn btn-secondary" data-toggle="tooltip" title="Requires 2 or more Players">Begin Game</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    
+        <!-- Shuffle Modal -->
+        <div class="modal fade" id="shuffleModal" tabindex="-1" role="dialog" aria-labelledby="shuffleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="shuffleModalLabel">That's All, Folks!</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <p>No cards remaining in deck. Shuffling deck.</p>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

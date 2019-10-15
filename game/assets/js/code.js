@@ -112,10 +112,11 @@ function showCard() {
         } else { //display card
             if (typeof newCard.contrib === "undefined") {
                 gameArea.innerHTML = '<div class="card shadow ' + newCard.category + '"><h3 class="">' + newCard.header + '</h3><h6 class"">' + newCard.body + '</h6></div>';
+                i++;
             } else {
                 gameArea.innerHTML = '<div class="card shadow ' + newCard.category + '"><h3 class="">' + newCard.header + '</h3><h6 class="">' + newCard.body + '</h6><p class="contrib">' + newCard.contrib + '</p></div>';
+                i++;
             }
-            i++;
             if (newCard.decay > 0) { //if card has a decay value...
                 var duration = newCard.decay * players.length;
                 rule = new Rule(ruleCount, newCard.header, newCard.body, duration, currentPlayer); //create new rule
