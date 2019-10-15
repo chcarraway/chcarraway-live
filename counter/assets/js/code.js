@@ -81,7 +81,9 @@ function p2Down() {
     document.getElementById('p2Life').innerHTML = `${p2Life}`;
 }
 
-
+$('#nameModal').on('shown.bs.modal', function () {
+    $('#nameField').focus()
+})
 
 //Event Listeners
 document.getElementById("life20").addEventListener('click', life20);
