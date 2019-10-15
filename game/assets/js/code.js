@@ -38,7 +38,6 @@ function welcomeContinue() {
     $('#welcomeModal').modal('hide');
     $('#addPlayerModal').modal('show');
     document.getElementById('beginGame').disabled = true;
-    document.getElementById('player').focus();
 }
 
 function addPlayerModal() {
@@ -46,6 +45,7 @@ function addPlayerModal() {
     document.getElementById('player').value = "";
     document.getElementById('nameLabel').innerHTML = "What is your name?";
     if (players.length >= 2) {
+        document.getElementById('nameLabel').innerHTML = "Add more players or click Begin Game to start!";
         button = document.getElementById('beginGame');
         button.disabled = false;
         button.classList.remove("btn-secondary");
@@ -144,6 +144,10 @@ function validate() {
         addPlayer();
     }
 }
+
+$('#addPlayerModal').on('shown.bs.modal', function () {
+    $('#player').focus()
+})
 
 document.getElementById("addPlayerModalForm").addEventListener('submit', function(e){e.preventDefault()});
 document.getElementById("welcomeContinue").addEventListener('click', welcomeContinue);
