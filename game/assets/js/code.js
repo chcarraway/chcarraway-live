@@ -9,6 +9,7 @@ cards = shuffle(cards); //comment out for decay testing
 card = Object.keys(cards);
 table = document.getElementById("ongoingtable");
 tbody = document.getElementById("ongoingtbody");
+gameArea = document.getElementById("gameArea");
 
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
@@ -73,7 +74,7 @@ function newTurn() {
     //add items to table
     for (loop = 0; loop < ruleCount; loop++){
         if (rules[loop].decay > 0) {
-            tbody.innerHTML += "</td><td>" + rules[loop].header + "</td><td>" + rules[loop].body + "</td><td>" + rules[loop].decay + "</td><td>" + rules[loop].player + "</td></tr>"; //add rule to Ongoing Effects table
+            tbody.innerHTML += "<tr><td>" + rules[loop].header + "</td><td>" + rules[loop].body + "</td><td>" + rules[loop].decay + "</td><td>" + rules[loop].player + "</td></tr>"; //add rule to Ongoing Effects table
         }
         if (rules[loop].decay == 0) {
             activeRules--;
@@ -101,15 +102,19 @@ function showCard() {
     if (i === card.length) { //if 0 cards left in deck, shuffle deck and restart
         $('#shuffleModal').modal('show');
         i = 1;
-        cards = shuffle(cards); //comment out for decay testing
-showCard();
+        cards = shuffle(cards);
+        showCard();
     } else {
         var newCard = cards[card[i]];
         if (newCard.header === "" || newCard.nac === "nac") { //if card is blank, or if card is not a card, ignore this card and move on to the next
             i++;
             showCard();
         } else { //display card
-            document.getElementById('card').innerHTML = '<h3>' + newCard.header + '</h3><br/><h6>' + newCard.body + '</h6>';
+            if (typeof newCard.contrib === "undefined") {
+                gameArea.innerHTML = '<div class="card shadow ' + newCard.category + '"><h3 class="">' + newCard.header + '</h3><h6 class"">' + newCard.body + '</h6></div>';
+            } else {
+                gameArea.innerHTML = '<div class="card shadow ' + newCard.category + '"><h3 class="">' + newCard.header + '</h3><h6 class="">' + newCard.body + '</h6><p class="contrib">' + newCard.contrib + '</p></div>';
+            }
             i++;
             if (newCard.decay > 0) { //if card has a decay value...
                 var duration = newCard.decay * players.length;
