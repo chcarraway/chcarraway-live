@@ -273,7 +273,11 @@ var cards = [
         body: "For the next 3 rounds, you are the Viking. Whenever you put your horns up (place fingers up by head), all other players must paddle twice on each side and then put their horns up. Last player to do so must drink!",
         decay: 3,
         contrib: "Kriseevee"
-    },    
+    }, {
+        category: "Ongoing",
+        header: "It's Not Funny!",
+        body: "Until your next turn, you must try to make the other players laugh. If any other player laughs, all of them must drin! If no other players laugh before your next turn, you must take a shot!"
+    },
 
 /*
     {
