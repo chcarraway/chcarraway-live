@@ -4,11 +4,11 @@
     <title>Another Generic Drinking Game!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/game.css">
+    <link rel="stylesheet" href="assets/css/styles.css">
     <script src='../assets/js/jquery-3.4.1.min.js'></script>
     <script src="../assets/js/bootstrap.bundle.min.js"></script>
-    <!--script src='assets/js/cards.test.js'></script-->
-    <script src="assets/js/cards.js"></script>
+    <script src="assets/data/cards.js"></script>
+    <script defer src="assets/js/code.js"></script>
 </head>
 
 <body>
@@ -21,7 +21,7 @@
         <div class='row'>
             <div class='col'>
                 <div class='gameArea' id="gameArea">
-                    <div class='card shadow nac' id='card'><h1>Another Generic Drinking Game</h1></div>
+                    <div class='card shadow nac' id='card'><h1>Another<br />Generic<br />Drinking<br />Game</h1></div>
                 </div>
                 <button role="button" id="nextCard" class="btn btn-primary">Click Here to Begin</button>
                 <table class='table table-sm d-none' id='ongoingtable'>
@@ -52,7 +52,8 @@
                         <p>Please drink responsibly<br />Or not, I'm not your dad<br /><br />Inspired by the multitude of cheaply produced card games that have become popular from the past few years</p>
                     </div>
                     <div class="modal-footer">
-                        <button type="button" id="welcomeContinue" class="btn btn-primary">Continue</button>
+                        <button type="button" id="welcomeContinue" class="btn btn-primary">Play Game</button>
+                        <button type="button" id="displayCards" class="btn btn-primary">View Cards</button>
                     </div>
                 </div>
             </div>
@@ -105,5 +106,4 @@
     });
     </script>
 </body>
-<script src="assets/js/code.js"></script>
 </html>

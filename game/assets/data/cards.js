@@ -276,34 +276,7 @@ var cards = [
     }, {
         category: "Ongoing",
         header: "It's Not Funny!",
-        body: "Until your next turn, you must try to make the other players laugh. If any other player laughs, all of them must drin! If no other players laugh before your next turn, you must take a shot!"
+        body: "Until your next turn, you must try to make the other players laugh. If any other player laughs, all of them must drin! If no other players laugh before your next turn, you must take a shot!",
+        decay: 1
     },
-
-/*
-    {
-        category: "",
-        header: "",
-        body: ""
-    },{
-        category: "",
-        header: "",
-        body: ""
-    },{
-        category: "",
-        header: "",
-        body: ""
-    },{
-        category: "",
-        header: "",
-        body: ""
-    },{
-        category: "",
-        header: "",
-        body: ""
-    },{
-        category: "",
-        header: "",
-        body: ""
-    }
-*/
 ]

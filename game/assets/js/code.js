@@ -5,11 +5,11 @@ turn = 0;
 i = 0;
 ruleCount = 0;
 activeRules = 0;
-cards = shuffle(cards); //comment out for decay testing
 card = Object.keys(cards);
 table = document.getElementById("ongoingtable");
 tbody = document.getElementById("ongoingtbody");
 gameArea = document.getElementById("gameArea");
+cat = "";
 
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
@@ -64,9 +64,17 @@ function addPlayer() {
 function beginGame() {
     $('#addPlayerModal').modal('hide');
     currentPlayer = players[turn];
+    cards = shuffle(cards);
 }
 
+
 function newTurn() {
+    if (Array.isArray(players) && players.length === 0) {
+        gameArea.innerHTML = "";
+        $('#addPlayerModal').modal('show');
+        document.getElementById('beginGame').disabled = true;
+        document.getElementById('nextCard').innerHTML = "Start Game";
+    } else {
     //change the text on the button
     document.getElementById('nextCard').innerHTML = "Next Turn";
     //destroy ongoing effects table
@@ -96,7 +104,7 @@ function newTurn() {
 
     //call showCard
     showCard();
-}
+}}
 
 function showCard() {
     if (i === card.length) { //if 0 cards left in deck, shuffle deck and restart
@@ -110,23 +118,22 @@ function showCard() {
             i++;
             showCard();
         } else { //display card
-            if (typeof newCard.contrib === "undefined") {
-                gameArea.innerHTML = '<div class="card shadow ' + newCard.category + '"><h3 class="">' + newCard.header + '</h3><h6 class"">' + newCard.body + '</h6></div>';
-                i++;
-            } else {
-                gameArea.innerHTML = '<div class="card shadow ' + newCard.category + '"><h3 class="">' + newCard.header + '</h3><h6 class="">' + newCard.body + '</h6><p class="contrib">' + newCard.contrib + '</p></div>';
-                i++;
-            }
-            if (newCard.decay > 0) { //if card has a decay value...
-                var duration = newCard.decay * players.length;
-                rule = new Rule(ruleCount, newCard.header, newCard.body, duration, currentPlayer); //create new rule
-                rules.push(rule);
-                ruleCount++;
-                activeRules++;
-            };
+            newCard.contrib === undefined && (newCard.contrib = "AGDG") //if contrib is undefined, AGDG
+            gameArea.innerHTML = '<div class="card shadow ' + newCard.category + '"> ' +
+                '<div class="card-header border-0 w-100 bg-transparent"><h4>' + newCard.header + '</h4></div> ' +
+                '<div class="card-body align-items-center d-flex justify-content-center"><p class="card-text ">' + newCard.body + '</p></div>' +
+                '<div class="card-footer border-0 w-100 bg-transparent text-muted"><small class="">' + newCard.contrib + '</small></div></div>';
+            i++;
+        }
+        if (newCard.decay > 0) { //if card has a decay value...
+            var duration = newCard.decay * players.length;
+            rule = new Rule(ruleCount, newCard.header, newCard.body, duration, currentPlayer); //create new rule
+            rules.push(rule);
+            ruleCount++;
+            activeRules++;
         };
     };
-}
+};
 
 function removeShake() {
     document.getElementById('addPlayerModal').classList.remove("shake");
@@ -145,6 +152,27 @@ function validate() {
     }
 }
 
+function displayCards() {
+    $('#welcomeModal').modal('hide');
+    for (x = 0; x < cards.length; x++) {
+        var newCard = cards[card[x]];
+        if (newCard.header === "") { //if card is blank, ignore this card and move on to the next
+        } else { //display card
+            if (newCard.nac === "nac") {//if card is not a card, make new container for the category
+                gameArea.innerHTML += '<div class="row border category" id="' + newCard.category + '"></div>';
+                cat = document.getElementById(newCard.category);
+                cat.innerHTML += '<div class="card nac shadow ' + newCard.category + '"><h2 class="">' + newCard.header + '</h2><br /><br /><h6 class="">' + newCard.body + '</h6></div>';
+            } else {//print card in category
+                newCard.contrib === undefined && (newCard.contrib = "AGDG") //if contrib is undefined, AGDG
+                cat.innerHTML += '<div class="card shadow ' + newCard.category + '"> ' +
+                    '<div class="card-header border-0 w-100 bg-transparent"><h4>' + newCard.header + '</h4></div> ' +
+                    '<div class="card-body align-items-center d-flex justify-content-center"><p class="card-text ">' + newCard.body + '</p></div>' +
+                    '<div class="card-footer border-0 w-100 bg-transparent text-muted"><small class="">' + newCard.contrib + '</small></div></div>';
+            }
+        }
+    }
+}
+
 $('#addPlayerModal').on('shown.bs.modal', function () {
     $('#player').focus()
 })
@@ -154,3 +182,4 @@ document.getElementById("welcomeContinue").addEventListener('click', welcomeCont
 document.getElementById("addPlayer").addEventListener('click', validate);
 document.getElementById("beginGame").addEventListener('click', beginGame);
 document.getElementById("nextCard").addEventListener('click', newTurn);
+document.getElementById("displayCards").addEventListener('click', displayCards);
