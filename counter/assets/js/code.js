@@ -1,7 +1,7 @@
 startingLife = 0;
 p1Life = 0;
 p2Life = 0;
-players = ['Spike', 'Jimmy'];
+players = ['Player 1', 'Player 2'];
 x = 0;
 
 function showCounterModal(){
