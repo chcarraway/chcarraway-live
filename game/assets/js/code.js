@@ -179,7 +179,7 @@ $('#addPlayerModal').on('shown.bs.modal', function () {
 
 document.getElementById("addPlayerModalForm").addEventListener('submit', function(e){e.preventDefault()});
 document.getElementById("welcomeContinue").addEventListener('click', welcomeContinue);
-document.getElementById("addPlayer").addEventListener('click', validate);
+document.getElementById("addPlayer").addEventListener('click', function(event){event.preventDefault(); validate()});
 document.getElementById("beginGame").addEventListener('click', beginGame);
 document.getElementById("nextCard").addEventListener('click', newTurn);
 document.getElementById("displayCards").addEventListener('click', displayCards);

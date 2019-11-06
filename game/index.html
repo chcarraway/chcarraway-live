@@ -66,19 +66,19 @@
             <div class="modal fade" id="addPlayerModal" tabindex="-1" role="dialog" aria-labelledby="addPlayerModalLabel" aria-hidden="true" data-backdrop="static" data-keyboard="false">
                 <div class="modal-dialog modal-dialog-centered modal-sm" role="document">
                     <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="addPlayerModalLabel">Player 1</h5>
-                        </div>
-                        <div class="modal-body">
-                            <form id="addPlayerModalForm">
-                            <p id='nameLabel'>What is your name?</p>
-                            <input type='text' id='player' class='form-control' placeholder="Your name here">
-                            </form>
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" id="addPlayer" class="btn btn-primary">Add Player</button>
+                        <form id="addPlayerModalForm">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="addPlayerModalLabel">Player 1</h5>
+                            </div>
+                            <div class="modal-body">    
+                                <p id='nameLabel'>What is your name?</p>
+                                <input type='text' id='player' class='form-control' placeholder="Your name here">
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" id="addPlayer" class="btn btn-primary">Add Player</button>
                                 <button type="button" id="beginGame" class="btn btn-secondary" data-toggle="tooltip" title="Requires 2 or more Players">Begin Game</button>
-                        </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
