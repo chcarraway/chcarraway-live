@@ -18,6 +18,7 @@ p {
     padding: 1em;
 }
 .category {
+    background-color: white;
     margin: auto;
     margin-bottom: 1em;
     justify-content: center;
