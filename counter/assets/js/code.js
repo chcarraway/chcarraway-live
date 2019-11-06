@@ -95,4 +95,4 @@ document.getElementById("p2Up").addEventListener('click', p2Up);
 document.getElementById("p2Down").addEventListener('click', p2Down);
 document.getElementById("p1Name").addEventListener('click', p1Name);
 document.getElementById("p2Name").addEventListener('click', p2Name);
-document.getElementById("nameModalButton").addEventListener('click', nameModalButton);
+document.getElementById("nameModalButton").addEventListener('click', function(event){event.preventDefault(); nameModalButton()});
