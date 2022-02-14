@@ -8,11 +8,9 @@ html, body {
     font-style: normal;
 }
 #logo {
-    max-width: 150px;
+    width: 100%;
+    max-width: 600px;
 }
 .brand {
     font-family: "logofont";
-}
-.btn {
-    margin: auto;
 }
