@@ -7,13 +7,10 @@ html, body {
     font-weight: normal;
     font-style: normal;
 }
-.jumbotron {
-    background-color: #000;
-}
 #logo {
     max-width: 150px;
 }
-h1 {
+.brand {
     font-family: "logofont";
 }
 .btn {
