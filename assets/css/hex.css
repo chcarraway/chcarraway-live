@@ -1,0 +1,13 @@
+html, body {
+    height: 100%;
+}
+@font-face {
+    font-family: "logofont";
+    src: url("../fonts/SALARYMA.ttf");
+}
+h1 {
+    font-family: "logofont", sans-serif;
+}
+.btn {
+    margin: auto;
+}
