@@ -10,7 +10,9 @@ html, body {
 .jumbotron {
     background-color: #000;
 }
-
+#logo {
+    height: 150px;
+}
 h1 {
     font-family: "logofont";
 }
