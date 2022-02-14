@@ -3,7 +3,7 @@ html, body {
 }
 @font-face {
     font-family: "logofont";
-    src: url("../fonts/SALARYMA.ttf");
+    src: url("../fonts/SALARYMA.woff");
 }
 h1 {
     font-family: "logofont", sans-serif;
