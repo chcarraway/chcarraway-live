@@ -14,3 +14,7 @@ html, body {
 .brand {
     font-family: "logofont";
 }
+
+.bullet {
+    max-height: 2em;
+}
