@@ -17668,11 +17668,11 @@
 			<text x="51.29" y="1124.56" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Kill</text>		</g>
 		<g id="shape34-80" v:mID="34" v:groupContext="shape" transform="translate(227.25,-41.0625)">
 			<title>Sheet.34</title>
-			<desc>Spread ‘em</desc>
+			<desc>Give</desc>
 			<v:textBlock v:margins="rect(4,4,4,4)"/>
 			<v:textRect cx="66.375" cy="1118.56" width="132.75" height="25.875"/>
 			<rect x="0" y="1105.62" width="132.75" height="25.875" class="st1"/>
-			<text x="7.43" y="1124.56" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Spread ‘em</text>		</g>
+			<text x="44.14" y="1124.56" class="st2" v:langID="1033"><v:paragraph v:horizAlign="1"/><v:tabList/>Give</text>		</g>
 		<g id="shape35-83" v:mID="35" v:groupContext="shape" transform="translate(366.75,-41.0625)">
 			<title>Sheet.35</title>
 			<desc>Enter</desc>
